@@ -1,41 +1,56 @@
-# Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# 🌐 Website da Documentação
 
-## Installation
+Este site foi criado com o [Docusaurus](https://docusaurus.io/), um gerador moderno de sites estáticos ideal para documentação técnica.
 
-```bash
-yarn
-```
+## 📦 Instalação
 
-## Local Development
+Antes de tudo, instale as dependências com o comando:
 
 ```bash
-yarn start
+npm run
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+> 💡 Certifique-se de ter o `Node.js` e o `Yarn` instalados na sua máquina.
 
-## Build
+---
+
+## 💻 Ambiente de Desenvolvimento Local
+
+Para rodar o site localmente e ver as alterações em tempo real:
 
 ```bash
-yarn build
+npm run start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Isso vai iniciar um servidor local e abrir o navegador. Toda alteração feita nos arquivos será atualizada automaticamente sem precisar reiniciar o servidor.
 
-## Deployment
+---
 
-Using SSH:
+## 🛠️ Build (Gerar os Arquivos Estáticos)
+
+Para gerar os arquivos finais do site:
 
 ```bash
-USE_SSH=true yarn deploy
+npm run build
 ```
 
-Not using SSH:
+Esse comando cria uma versão estática na pasta `build`, pronta para ser publicada em qualquer serviço de hospedagem de sites estáticos (como GitHub Pages, Vercel, Netlify, etc).
+
+---
+
+## 🚀 Deploy (Publicar o Site)
+
+### Usando SSH:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+USE_SSH=true npm run deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Sem SSH (usando nome de usuário do GitHub):
+
+```bash
+GIT_USER=<SeuNomeDeUsuarioGitHub> npm run deploy
+```
+
+Se estiver usando o **GitHub Pages**, esse comando já cuida de tudo: constrói o site e envia para o branch `gh-pages`.
